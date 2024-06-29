@@ -5,7 +5,7 @@ function pomoc() {
     echo "Dostępne opcje:"
     echo "  --help    wyświetlanie tego okna pomocy"
     echo "  --date    wyświetlanie aktualnej daty"
-    echo "  --logi    tworzenie plików log.txt"
+    echo "  --logs    tworzenie plików log.txt"
 }
 
 function pokaz_date() {
@@ -15,7 +15,7 @@ function pokaz_date() {
 
 function logi() {
 	for i in {1..100};do
-		nazwapliku="log$i.txt"
+		nazwaPliku="log$i.txt"
 		echo "Nazwa Pliku: $nazwaPliku" > $nazwaPliku
 		echo "Utworzone przez: $0" >> $nazwaPliku
 		echo "Data utworzenia: $(date +%d/%m/%Y)" >> $nazwaPliku
