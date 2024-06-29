@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Nie czytałam zadania do przodu, help robiłam na bierząco, przepraszam
 function pomoc() {
     echo "Wpisz Lab4.sh --opcja"
     echo "Dostępne opcje:"
