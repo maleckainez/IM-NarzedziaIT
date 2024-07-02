@@ -2,10 +2,10 @@
 function pomoc() {
     echo "Wpisz Lab4.sh --opcja"
     echo "Dostępne opcje:"
-    echo "  --help        wyświetlanie tego okna pomocy"
-    echo "  --date        wyświetlanie aktualnej daty"
-    echo "  --logs        tworzenie stu plików log.txt"
-    echo "  --logs numer  tworzenie określonej ilości plików log"
+    echo "  -h lub --help        wyświetlanie tego okna pomocy"
+    echo "  -d lub --date        wyświetlanie aktualnej daty"
+    echo "  -l lub --logs        tworzenie stu plików log.txt"
+    echo "  -l numer lub --logs numer  tworzenie określonej ilości plików log"
 }
 
 function pokaz_date() {
@@ -24,13 +24,13 @@ function logi() {
 }
 
 case "$1" in
-    --help)
+    -h|--help)
         pomoc
     ;;
-    --date)
+    -d|--date)
         pokaz_date
     ;;
-    --logs)
+    -l|--logs)
         logi "$2"
     ;;
     *)
