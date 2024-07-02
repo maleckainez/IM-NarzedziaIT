@@ -22,6 +22,18 @@ function logi() {
         echo "Data utworzenia: $(date +%d/%m/%Y)" >> "$nazwaPliku"
     done
 }
+function init(){
+    git clone https://github.com/maleckainez/IM-NarzedziaIT
+        sciezkaPliku=$(dirname "($readlink -f "$0")")
+    if [[ ":$PATH:" = *"$sciezkaPliku"*  ]]; then
+        echo "Ścieżka jest w pliku PATH"
+    else
+        echo "Ścieżki nie ma w pliku PATH"
+        export PATH="$PATH:sciezkaPliku"
+        echo "Ale bez zmartwień, już została dodana"
+    fi
+    echo "Pomyślnie zainstalowano repozytorium"
+}
 
 case "$1" in
     -h|--help)
@@ -32,6 +44,9 @@ case "$1" in
     ;;
     -l|--logs)
         logi "$2"
+    ;;
+    -i|--init)
+        init
     ;;
     *)
         echo "Wybrano błędną opcję $1"
