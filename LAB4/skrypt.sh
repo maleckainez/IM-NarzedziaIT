@@ -2,10 +2,12 @@
 function pomoc() {
     echo "Wpisz Lab4.sh --opcja"
     echo "Dostępne opcje:"
-    echo "  --help (-h)        wyświetlanie tego okna pomocy"
-    echo "  --date (-d)       wyświetlanie aktualnej daty"
-    echo "  --logs (-l)       tworzenie stu plików log.txt"
-    echo "  --logs numer  tworzenie określonej ilości plików log"
+    echo "  --help (-h)         wyświetlanie tego okna pomocy"
+    echo "  --date (-d)         wyświetlanie aktualnej daty"
+    echo "  --logs (-l)         tworzenie stu plików log.txt"
+    echo "  --logs numer        tworzenie określonej ilości plików log"
+    echo "  --init (i)          klonowanie repozytorium"
+    echo "  --error numer (-e)  generowanie errorx.txt"
 }
 
 function pokaz_date() {
