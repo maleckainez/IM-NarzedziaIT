@@ -34,6 +34,14 @@ function init(){
     fi
     echo "Pomyślnie zainstalowano repozytorium"
 }
+function error(){
+    local liczba_plikow=${1:-100}
+    for ((i=1; i<=liczba_plikow; i++)); do
+        sciezkaIplik="error$i"
+        mkdir -p "$sciezkaIplik"
+        touch "$sciezkaIplik/$sciezkaIplik.txt"
+    done
+}
 
 case "$1" in
     -h|--help)
@@ -48,6 +56,8 @@ case "$1" in
     -i|--init)
         init
     ;;
+    -e|--error)
+        error "$2"
     *)
         echo "Wybrano błędną opcję $1"
         pomoc
